@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace VizeNTP
 {
     partial class Form1
@@ -30,69 +32,70 @@ namespace VizeNTP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnHavaDurumuBilgiAl = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ciili = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cldurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMakSicaklik = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.clHava = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnHavaDurumuBilgiAl
+            // clHava
             // 
-            this.btnHavaDurumuBilgiAl.Location = new System.Drawing.Point(8, 4);
-            this.btnHavaDurumuBilgiAl.Name = "btnHavaDurumuBilgiAl";
-            this.btnHavaDurumuBilgiAl.Size = new System.Drawing.Size(788, 44);
-            this.btnHavaDurumuBilgiAl.TabIndex = 0;
-            this.btnHavaDurumuBilgiAl.Text = "Hava Durumu Bilgileri Al";
-            this.btnHavaDurumuBilgiAl.UseVisualStyleBackColor = true;
-            this.btnHavaDurumuBilgiAl.Click += new System.EventHandler(this.btnHavaDurumuBilgiAl_Click);
+            this.clHava.Location = new System.Drawing.Point(5, 0);
+            this.clHava.Name = "clHava";
+            this.clHava.Size = new System.Drawing.Size(347, 23);
+            this.clHava.TabIndex = 0;
+            this.clHava.Text = "Hava Durumu Bilgilerini Al";
+            this.clHava.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ciili,
-            this.cldurum,
-            this.clMakSicaklik});
-            this.dataGridView1.Location = new System.Drawing.Point(9, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(786, 388);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView2.Location = new System.Drawing.Point(5, 29);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(347, 170);
+            this.dataGridView2.TabIndex = 1;
             // 
-            // ciili
+            // Column1
             // 
-            this.ciili.HeaderText = "ili";
-            this.ciili.Name = "ciili";
+            this.Column1.HeaderText = "ili";
+            this.Column1.Name = "Column1";
             // 
-            // cldurum
+            // Column2
             // 
-            this.cldurum.HeaderText = "Durum";
-            this.cldurum.Name = "cldurum";
+            this.Column2.HeaderText = "Durum";
+            this.Column2.Name = "Column2";
             // 
-            // clMakSicaklik
+            // Column3
             // 
-            this.clMakSicaklik.HeaderText = "MaksimumSıcaklık";
-            this.clMakSicaklik.Name = "clMakSicaklik";
+            this.Column3.HeaderText = "MaksimumSıcaklık";
+            this.Column3.Name = "Column3";
             // 
-            // timer1
+            // timer2
             // 
-            this.timer1.Interval = 500000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnHavaDurumuBilgiAl);
+            this.ClientSize = new System.Drawing.Size(485, 356);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.clHava);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -103,6 +106,13 @@ namespace VizeNTP
         private System.Windows.Forms.DataGridViewTextBoxColumn cldurum;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMakSicaklik;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button clHava;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
